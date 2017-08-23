@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <base href="/JovenesInvestigadores/"/>
+        <title>5to. Encuentro de Jóvenes Investigadores del Estado de Morelos</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="jquery-curp-1.2.2/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="jquery-curp-1.2.2/js/jquery.curp-1.2.2.js"></script>
+        <script src="js/sweetalert.min.js"></script>           
+        <link href="css/sweetalert.css" rel="stylesheet"> 
+        
+        <meta name="layout" content="main">
+          
+        <script type="text/javascript" src="js/funciones.js"></script>
+    
+    </head>
+    <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+        <div class="preloader">
+
+            <div class="sk-rotating-plane"></div>
+
+        </div>
+        
+        <div class="navbar navbar-fixed-top custom-navbar" role="navigation" style="background-color: black; opacity: 0.7;">
+            <div class="container">
+
+                <!-- navbar header -->
+                <div class="navbar-header" >
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand hidden-xs hidden-sm" >
+                        <img src="images/logo_4toEJIEM2016-03.png" width="200" alt="" style="margin-top: -19px"/>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--
+                        <li><a href="#intro" class="smoothScroll">INICIO</a></li>
+                        <li><a href="#overview" class="smoothScroll">INFORMACIÓN</a></li>
+                        <li><a href="#speakers" class="smoothScroll">PONENTES</a></li>
+                        <li><a href="#program" class="smoothScroll">PROGRAMA</a></li>
+                        <li><a href="registro_ji.php" class="smoothScroll">REGISTRO</a></li>
+                        <li><a href="#venue" class="smoothScroll">SEDE</a></li>
+                        <li><a href="#sponsors" class="smoothScroll">PATROCINADORES</a></li>
+                        -->        
+                        <li><a href="convocatoria/convocatoriaActual" class="smoothScroll">CONVOCATORIA</a></li>
+                        <li><a href="participante/create" class="smoothScroll">REGISTRO</a></li>
+                        <li><a href="usuario/login" class="smoothScroll">INICIAR SESIÓN</a></li>
+                    </ul>
+
+                </div>
+                
+
+            </div>
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+        <div class="container">        
+                   
+        <div id="create-participante" class="" role="main">
+            <div class="alert alert-info"><h3>Registro de participante</h3></div>
+            <h4>Favor de llenar el siguiente formulario con la información correspondiente para realizar tu registro.</h4>
+            <h5 style="color: red">NOTAS IMPORTANTES:</h5>
+            <ul><li>
+            <h5>En caso de participar con otros integrantes, únicamente se debe registrar el representante o autor del proyecto, posteriormente, iniciar sesión para registrar a los demás integrantes.</h5>
+            </li>
+            <li>
+            <h5 >El asesor o asesores de proyecto no se deben registrar aquí, una vez registrado el autor del proyecto, iniciar sesión para registrar al asesor o asesores.</h5>
+            </li></ul>
+            <br/>
+            
+            
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#personales" aria-controls="home" role="tab" data-toggle="tab">Datos personales del autor del proyecto:</a></li>             
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="personales">
+                    <form action="/JovenesInvestigadores/participante/save" method="post" >                        
+                        <fieldset class="form" >
+                            <div id="divForm"></div>   
+                            <div class="col-lg-11"><br/><br/></div>
+                            <input type="hidden" name="pluginCurp" value="false"/>
+                            
+
+
+<section class="col-lg-6">
+    <div class="fieldcontain  ">
+        <label for="institucion">
+            Institución de procedencia:
+
+        </label>
+        <select id="institucion" required="" name="institucion.id" class="many-to-one form-control" >
+<option value="1" >CENTRO DE CIENCIAS GEN&Oacute;MICAS</option>
+<option value="2" >CENTRO DE DESARROLLO DE PRODUCTOS BIOTICOS</option>
+<option value="3" >CENTRO DE EDUCACI&Oacute;N CONTINUA - IPN</option>
+<option value="4" >CENTRO DE ENSE&Ntilde;ANZA, INVESTIGACI&Oacute;N Y EXTENSI&Oacute;N EN PRODUCCI&Oacute;N OVINA</option>
+<option value="5" >CENTRO DE INVESTIGACION BIOMEDICA DEL SUR</option>
+<option value="6" >CENTRO DE INVESTIGACION Y DOCENCIA EN HUMANIDADES DEL ESTADO DE MORELOS</option>
+<option value="7" >CENTRO NACIONAL DE INVESTIGACI&Oacute;N Y DESARROLLO TECNOL&Oacute;GICO</option>
+<option value="8" >CENTRO NACIONAL DE INVESTIGACIONES DISCIPLINARIAS EN PARASITOLOGIA VETERINARIA</option>
+<option value="9" >CENTRO NACIONAL DE SERVICIOS DE CONSTATACION EN SALUD ANIMAL</option>
+<option value="10" >CENTRO REGIONAL DE INVESTIGACIONES MULTIDISCIPLINARIAS</option>
+<option value="11" >INSTITUTO DE BIOTECNOLOG&Iacute;A</option>
+<option value="12" >INSTITUTO DE CIENCIAS F&Iacute;SICAS</option>
+<option value="13" >INSTITUTO DE ENERG&Iacute;AS RENOVABLES</option>
+<option value="14" >INSTITUTO DE INVESTIGACIONES EL&Eacute;CTRICAS</option>
+<option value="15" >INSTITUTO DE MATEM&Aacute;TICAS UNIDAD UNAM CUERNAVACA</option>
+<option value="16" >INSTITUTO MEXICANO DE TECNOLOGIA DEL AGUA</option>
+<option value="17" >INSTITUTO NACIONAL DE ANTROPOLOGIA E HISTORIA - DELEGACION MORELOS</option>
+<option value="18" >INSTITUTO NACIONAL DE INVESTIGACIONES FORESTALES, AGRICOLAS Y PECUARIAS</option>
+<option value="19" >INSTITUTO NACIONAL DE SALUD P&Uacute;BLICA</option>
+<option value="20" >INSTITUTO TECNOL&Oacute;GICO DE CUAUTLA</option>
+<option value="21" >INSTITUTO TECNOL&Oacute;GICO DE ESTUDIOS SUPERIORES DE MONTERREY</option>
+<option value="22" >INSTITUTO TECNOL&Oacute;GICO DE ZACATEPEC</option>
+<option value="23" >UNIVERSIDAD AUT&Oacute;NOMA DEL ESTADO DE  MORELOS</option>
+<option value="24" >UNIVERSIDAD DEL VALLE DE M&Eacute;XICO</option>
+<option value="25" >UNIVERSIDAD POLIT&Eacute;CNICA DEL ESTADO DE MORELOS (UPEMOR)</option>
+<option value="26" >UNIVERSIDAD TECNOL&Oacute;GICA DE EMILIANO ZAPATA</option>
+<option value="27" >UNIVERSIDAD TECNOLOGICA DEL SUR DEL ESTADO DE MORELOS</option>
+<option value="28" >UNIVERSIDAD FRAY LUCA PACCIOLI</option>
+</select>
+
+    </div>
+    <br/>
+    <div class="fieldcontain  ">
+        <label for="escolaridad">
+            Máximo grado de estudios:
+
+        </label>
+        <select id="escolaridad" required="" name="escolaridad.id" class="many-to-one form-control" >
+<option value="1" >LICENCIATURA</option>
+<option value="2" >MAESTRIA</option>
+<option value="3" >DOCTORADO</option>
+</select>
+
+    </div>
+    <br/>
+    <div class="fieldcontain  ">
+        <label for="estadoCivil">
+            Estado civil:
+
+        </label>
+        <select id="estadoCivil" required="" name="estadoCivil.id" class="many-to-one form-control" >
+<option value="1" >SOLTERO(A)</option>
+<option value="2" >CASADO(A)</option>
+<option value="3" >DIVORCIADO(A)</option>
+<option value="4" >VIUDO(A)</option>
+<option value="5" >UNION LIBRE</option>
+</select>
+
+    </div>
+    <br/>
+    <div class="fieldcontain  ">
+        <label for="ocupacion">
+            Ocupación:
+
+        </label>
+        <select id="ocupacion" required="" name="ocupacion.id" class="many-to-one form-control" >
+<option value="1" >ESTUDIANTE LICENCIATURA</option>
+<option value="2" >EGRESADO</option>
+<option value="3" >PROFESOR</option>
+<option value="4" >ESTUDIANTE POSGRADO</option>
+<option value="5" >OTRO</option>
+</select>
+
+    </div>
+    <br/>
+    <div class="fieldcontain  ">
+        <label for="discapacidad">
+            ¿Tienes alguna discapacidad?
+
+        </label>
+        <select class="form-control" required="" name="discapacidad" id="discapacidad" >
+<option value="NO" >NO</option>
+<option value="SI" >SI</option>
+</select>
+
+    </div>
+</section>
+
+
+<section class="col-lg-6">
+    <div class="fieldcontain  ">
+        <label for="estadoNacimiento">
+            Estado de nacimiento:
+
+        </label>
+        <select id="estadoNacimiento" required="" name="estadoNacimiento.id" class="many-to-one form-control" >
+<option value="1" >AGUASCALIENTES</option>
+<option value="2" >BAJA CALIFORNIA</option>
+<option value="3" >BAJA CALIFORNIA SUR</option>
+<option value="4" >CAMPECHE</option>
+<option value="5" >CHIAPAS</option>
+<option value="6" >CHIHUAHUA</option>
+<option value="7" >COAHUILA</option>
+<option value="8" >COLIMA</option>
+<option value="9" >DISTRITO FEDERAL</option>
+<option value="10" >DURANGO</option>
+<option value="11" >ESTADO DE M&Eacute;XICO</option>
+<option value="12" >GUANAJUATO</option>
+<option value="13" >GUERRERO</option>
+<option value="14" >HIDALGO</option>
+<option value="15" >JALISCO</option>
+<option value="16" >MICHOAC&Aacute;N</option>
+<option value="17" >MORELOS</option>
+<option value="18" >NAYARIT</option>
+<option value="19" >NUEVO LE&Oacute;N</option>
+<option value="20" >OAXACA</option>
+<option value="21" >PUEBLA</option>
+<option value="22" >QUER&Eacute;TARO</option>
+<option value="23" >QUINTANA ROO</option>
+<option value="24" >SAN LUIS POTOS&Iacute;</option>
+<option value="25" >SINALOA</option>
+<option value="26" >SONORA</option>
+<option value="27" >TABASCO</option>
+<option value="28" >TAMAULIPAS</option>
+<option value="29" >TLAXCALA</option>
+<option value="30" >VERACRUZ</option>
+<option value="31" >YUCAT&Aacute;N</option>
+<option value="32" >ZACATECAS</option>
+</select>
+
+    </div>
+    <br/>
+
+    <div class="fieldcontain  ">
+        <label for="telefonoPrincipal">
+            Teléfono principal:
+
+        </label>
+        <input type="text" name="telefonoPrincipal" required="" class="form-control" value="" minlength="10" maxlength="10" id="telefonoPrincipal" />
+
+    </div>
+    <br/>
+    <div class="fieldcontain  ">
+        <label for="correoElectronico">
+            Correo electrónico:
+
+        </label>
+        <input type="text" class="form-control" required="" name="correoElectronico" maxlength="150" value="" id="correoElectronico" />
+
+    </div>
+    <br/>
+    <div class="fieldcontain ">
+        <label for="correoElectronicoRep">
+            Repetir correo electrónico:
+
+        </label>
+        <input type="text" class="form-control" required="" name="correoElectronicoRep" maxlength="150" value="" id="correoElectronicoRep" />
+
+    </div>
+</section>
+
+                        </fieldset>   
+                        <br/><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="submit" name="create" class="btn btn-info" value="Guardar registro" id="create" />   
+                    </form>
+                </div>   
+                <br/>
+            </div>
+            
+        </div>         
+         
+        <script>
+            $(document).ready(function() {
+                //Validación por curp
+                $("#divForm").validaCurp({
+                hidden: false, //Mostrar u ocultar eL campo curp
+                inputName: {//Define el valor del atributo "name" de los campos
+                curp: "curp",
+                nombre: "nombre",
+                aPaterno: "apellidoPaterno",
+                aMaterno: "apellidoMaterno",
+                sexo: "sexoPlugin",
+                fNacimiento: "fechaNacimientoPlugin",
+                eNacimiento: "eNacimiento"
+                },
+                columns: true, //Mostrar campos en 2 columnas
+                //initData: initData, //Mapa de datos iniciales
+                readOnly: false //Todos los campos de solo lectura
+                });
+                cargarSubcategorias();
+            });
+        </script>
+    
+        </div>
+        
+        
+       <!--  
+        <section id="overview" class="parallax-section">
+            <div class="container">
+                <div class="row">
+                   esto
+                    <div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s">
+                        <h3>5to. Encuentro de Jóvenes Investigadores del Estado de Morelos</h3>
+                        <p align="justify">La Secretaría de Innovación, Ciencia y Tecnología del Gobierno del Estado de Morelos - SICyT y el Consejo Nacional de Ciencia y Tecnología - CONACYT, tienen el placer de invitar a la comunidad estudiantil y académica al <strong>“4o. Encuentro de Jóvenes Investigadores del Estado de Morelos”</strong>, el cual se llevará a cabo el 27 de septiembre de 2016 (fecha tentativa), (sede pendiente) en la ciudad de Cuernavaca, Morelos.</p>
+                        <p align="justify">Este importante evento es un espacio de encuentro para jóvenes interesados en la Innovación, Ciencia, Tecnología, Ciencias Sociales y Humanidades, en el cual se tendrán las siguientes actividades: Conferencias temáticas y de promoción hacia el estudio de carreras científicas en licenciatura y posgrado, la exhibición de carteles científicos y presentaciones orales de los proyectos finalistas en el “Concurso de Proyectos de Investigación 2016” y la premiación de los ganadores del Concurso, así como una Feria de Posgrados de Calidad inscritos al PNPC.</p>
+                        <p align="justify">La SICyT agradece ampliamente el apoyo económico que el CONACYT otorgó a este proyecto, así como la entusiasta participación de universidades y centros de investigación del Estado, así como de las Academias de Ciencias en Morelos. Solicitamos atentamente que los interesados en asistir al evento realicen el pre-registro correspondiente a través de ésta página y convocamos de una manera muy especial a los estudiantes de último año de preparatoria y de licenciatura, ya que en el evento encontrarán información de mucho interés.</p>
+                        <p align="justify">&nbsp;</p>
+                        <p>ATENTAMENTE</p>
+                        <p>&nbsp;</p>
+                        <p>Dra. Brenda Valderrama Blanco<br>
+                            Secretaria de Innovaci&oacute;n, Ciencia y Tecnolog&iacute;a del Estado de Morelos</p>
+                    </div>
+
+                    <div class="wow fadeInUp col-md-5 col-sm-5" data-wow-delay="0.9s">
+                        <img src="images/overview-img.jpg" class="img-responsive" alt="Overview">
+                    </div>
+
+                </div>
+            </div>
+        </section>-->
+
+<!-- =========================
+    SPEAKERS SECTION   
+============================== -->
+    <!--esto
+        <section id="speakers" class="parallax-section">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12 wow bounceIn">
+                        <div class="section-title">
+                            <h2>Conferencistas</h2>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+
+                    <div id="owl-speakers" class="owl-carousel">
+
+                        <div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+                            <div class="speakers-wrapper">
+                                <img src="images/speakers-img1.jpg" class="img-responsive" alt="speakers">
+                                <div class="speakers-thumb">
+                                    <h3>Dr. Edgar <br>García Hernandez</h3>
+                                    <h6>Instituto Tecnológico de Zacatepec</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+                            <div class="speakers-wrapper">
+                                <img src="images/speakers-img2.jpg" class="img-responsive" alt="speakers">
+                                <div class="speakers-thumb">
+                                    <h3>Dra. Sonia <br>Frías Martínez</h3>
+                                    <h6>CRIM – UNAM</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+                            <div class="speakers-wrapper">
+                                <img src="images/speakers-img3.jpg" class="img-responsive" alt="speakers">
+                                <div class="speakers-thumb">
+                                    <h3>Dr. Jorge Luis <br>Folch Mallol</h3>
+                                    <h6>CIB – UAEM</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+                            <div class="speakers-wrapper">
+                                <img src="images/speakers-img4.jpg" class="img-responsive" alt="speakers">
+                                <div class="speakers-thumb">
+                                    <h3>Mtro. Manuel Alejandro <br>Triana Valencia</h3>
+                                    <h6>IER – UNAM</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+                            <div class="speakers-wrapper">
+                                <img src="images/speakers-img5.jpg" class="img-responsive" alt="speakers">
+                                <div class="speakers-thumb">
+                                    <h3>Dr. Juan Francisco <br>Molina Rodríguez</h3>
+                                    <h6>INSP</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+                            <div class="speakers-wrapper">
+                                <img src="images/speakers-img6.jpg" class="img-responsive" alt="speakers">
+                                <div class="speakers-thumb">
+                                    <h3>Dra. Irene <br>Fenoglio Limón</h3>
+                                    <h6>Humanidades - UAEM</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+                            <div class="speakers-wrapper">
+                                <img src="images/speakers-img7.jpg" class="img-responsive" alt="speakers">
+                                <div class="speakers-thumb">
+                                    <h3>Dra. María Luisa del Carmen <br>Garduño Ramírez</h3>
+                                    <h6>CIQ – UAEM</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="program" class="parallax-section">
+            <div class="container">
+                <div class="row">
+
+                    <h3 align="center">PROGRAMA GENERAL DEL EVENTO</h3>
+                    <br>
+                    <p align="center">
+                        <strong>“4to. Encuentro de Jóvenes Investigadores del Estado de Morelos”</strong><br>
+                        Hotel Villa Bejar, Cuernavaca Morelos, martes 27 de septiembre de 2016.
+                        <br>
+                        <br>
+
+                    </p>
+                    <table class="table table-striped table-hover">
+                        <tr>
+                            <td width="113"><p align="center">8:30hrs.</p></td>
+                            <td width="860" colspan="3"><p align="center"><strong>REGISTRO</strong><strong> </strong></p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">&nbsp;</p></td>
+                            <td width="209"><p align="center"><strong>SALÓN &ldquo;GRANADA&rdquo;</strong> <br>
+                                    <strong>Feria de Posgrados PNPC y Exposición de posters</strong></p></td>
+                            <td width="331"><p align="center"><strong>SALÓN &ldquo;ARRAYANES&rdquo;</strong> <br>
+                                    <strong>Conferencias y presentaciones orales de proyectos    finalistas</strong></p></td>
+                            <td width="320"><p align="center"><strong>SALÓN &ldquo;ALJIBES&rdquo;</strong> <br>
+                                    <strong>Conferencias y presentaciones orales de proyectos    finalistas</strong></p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">9:30 a 9:55 hrs.</p></td>
+                            <td width="209" rowspan="14"><p align="center"><strong>Exposición de carteles científicos de finalistas en el    Concurso de Proyectos de Investigación 2016</strong></p>
+                                <p align="center">Exponen: proyectos    finalistas</p>
+                                <p align="center"><strong>Feria de posgrados PNPC y licenciaturas científicas</strong></p>
+                                <p align="center">&nbsp;</p>
+                                <p align="center"><strong>Expositores:</strong></p>
+                                <p align="center">UAEM<br>
+                                    UNAM Morelos<br>
+                                    CENIDET<br>
+                                    INSP<br>
+                                    CeProBi – IPN<br>
+                                    ITZ<br>
+                                    UPEMOR</p>
+                                <p align="center"><strong>Otros expositores:</strong></p>
+                                <p align="center">SICyT<br>
+                                    CCyTEM (CeMoCC/CeMITT)</p></td>
+                            <td width="331"><p align="center"><strong><em>&quot;El ingenio de    los genios de la Ingeniería&quot;</em></strong><br>
+                                    Dr.    Edgar García Hernández ITZ </p></td>
+                            <td width="320"><p align="center"><strong><em> &ldquo;Claves para Comprender y Transformar la    Sociedad: La Importancia de un Posgrado en Ciencias Sociales&rdquo;</em></strong><br>
+                                    Dra.    Sonia Frías Martínez CRIM – UNAM </p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">10:00 a 10:15 hrs.</p></td>
+                            <td width="331"><p align="center">Proyecto Finalista    Área I. &ldquo;SÍNTESIS DE ISOINDOLIN-1-ONAS 2,3-DISUSTITUIDAS A TRAVÉS UN PROCESO    ONE-POT&rdquo;</p></td>
+                            <td width="320"><p align="center">Proyecto Finalista    Área I. GELES POLIMÉRICOS CONDUCTORES DE IONES SODIO BASADOS EN LÍQUIDOS    IÓNICOS</p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p>10:15 a    10:30 hrs.</p></td>
+                            <td width="331"><p align="center">Proyecto Finalista    Área II. DISEÑO Y CARACTERIZACIÓN MICROESTRUCTURAL DE PELÍCULAS POLIMÉRICAS    DE ALGINATO ADICIONADAS CON ACEITE ESENCIAL DE CANELA</p></td>
+                            <td width="320"><p align="center">Proyecto Finalista    Área II. INTERACCIÓN ENTRE SOLANUM LYCOPERSICUM Y UNA CEPA DE TRICHODERMA    ATROVIRIDE QUE SOBREEXPRESA LA SWOLLENINA</p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">10:30 a 10:45 hrs.</p></td>
+                            <td width="331"><p align="center">Proyecto Finalista    Área IV. ESTUDIO TEÓRICO-EXPERIMENTAL DE FENÓMENOS DE TRANSPORTE EN SISTEMAS    TERMOELÉCTRICOS</p></td>
+                            <td width="320"><p align="center">Proyecto Finalista    Área IV. &quot;EVALUACIÓN HIDROGEOQUÍMICA DE UN SITIO CONTAMINADO POR    CROMO&quot;</p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">10:45 a 11:00 hrs.</p></td>
+                            <td width="331"><p align="center">Proyecto Finalista    Área V. LA MEMORIA BIOCULTURAL ENTRE LOS JÓVENES DE LA COMUNIDAD RURAL DE    COAJOMULCO, MORELOS</p></td>
+                            <td width="320"><p align="center">Proyecto Finalista    Área V. EXPERIMENTAR LA DIABETES: SU ATENCIÓN EN ADULTOS MAYORES DE    CUERNAVACA</p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">11:00 a 11:20 hrs.</p></td>
+                            <td width="651" colspan="2"><p align="center"><em>RECESO, EXPOSICIÓN DE POSTERS DE PROYECTOS DE    INVESTIGACIÓN Y FERIA DE POSGRADOS</em></p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">11:20 a 11:45 hrs.</p></td>
+                            <td width="331"><p align="center"><strong><em>&quot;Ahora es    cuando, mis honguitos, le han de dar sabor al caldo.&quot;</em></strong><br>
+                                    Dr. Jorge Luis Folch Mallol CIB – UAEM </p></td>
+                            <td width="320"><p align="center"><strong></strong><strong><em>&ldquo;Celda Solar&rdquo;</em></strong><br>
+                                    Mtro.    Manuel Alejandro Triana Valencia IER – UNAM </p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">11:45 a 12:00 hrs.</p></td>
+                            <td width="331"><p align="center">Proyecto Finalista    Área VI. GELES POLIMÉRICOS ELECTROLITOS BASADOS EN LÍQUIDOS IÓNICOS DE    IMIDAZOL</p></td>
+                            <td width="320"><p align="center">Proyecto Finalista    Área VI. ESTUDIO EXPERIMENTAL DEL PROCESO DE CONGELACIÓN/FUSIÓN DEL AGUA DE    MAR PARA SU DESALACIÓN.</p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">12:00 a 12:15 hrs.</p></td>
+                            <td width="331"><p align="center">Proyecto Finalista    Área VI. FORMULACIÓN DE PELÍCULAS HÍBRIDAS DE GRENETINA-NANOARCILLA    UTILIZANDO ALTAS FRECUENCIAS</p></td>
+                            <td width="320"><p align="center">Proyecto Finalista    Área VI. MEMBRANAS POLIMÉRICAS CONDUCTORAS DE PROTONES COMO ALTERNATIVA A    NAFION</p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">12:15 a 12:30 hrs.</p></td>
+                            <td width="331"><p align="center">Proyecto Finalista    Área VII. DETERMINACIÓN DE LA VIRULENCIA PRODUCCIÓN POR LAS CITOTOXINAS CAGA    Y VACA DE HELICOBACTER PYLORI</p></td>
+                            <td width="320"><p align="center">Proyecto Finalista    Área VII. EVALUACIÓN DE CONOCIMIENTOS, ACTITUDES Y EXPOSICIÓN A HUMO DE    TABACO EN ESTUDIANTES UNIVERSITARIOS, 2015</p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p>12:30    a 12:50 hrs.</p></td>
+                            <td width="651" colspan="2"><p align="center"><em>RECESO, EXPOSICIÓN DE POSTERS DE PROYECTOS DE    INVESTIGACIÓN Y FERIA DE POSGRADOS</em></p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">13:00 a 13:25 hrs.</p></td>
+                            <td width="331"><p align="center"><strong><em>&ldquo; Trascendencia de    la Investigación Científica en Medicina y Ciencias de la Salud&rdquo;</em></strong><br>
+                                    Dr.    Juan Francisco Molina Rodríguez INSP </p></td>
+                            <td width="320"><p align="center"><strong><em>&quot;Humanidades...    ¿y eso con qué se come?&quot;</em></strong><br>
+                                    Dra.    Irene Fenoglio Limón Humanidades – UAEM </p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">13:30 a 13:55</p></td>
+                            <td width="331"><p align="center"><strong><em>&quot;La química    hoy,  el diseño molecular y su    inmersión al mundo nanométrico&quot;</em></strong><br>
+                                    Dra.    María Luisa del Carmen Garduño Ramírez CIQ – UAEM </p></td>
+                            <td width="320"><p align="center"><strong>&nbsp;</strong></p></td>
+                        </tr>
+                        <tr>
+                            <td width="113"><p align="center">14:00 a 14:30 hrs.</p></td>
+                            <td width="331"><p align="center">&nbsp;</p></td>
+                            <td width="320"><p align="center"><strong><em>CLAUSURA Y ENTREGA    DE PREMIOS DEL CONCURSO DE PROYECTOS DE INVESTIGACIÓN</em></strong></p></td>
+                        </tr>
+                    </table>
+                    <br>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="venue" class="parallax-section">
+            <div class="container">
+                <div class="row">
+                    <div class="wow fadeInUp col-md-offset-1 col-md-5 col-sm-6" data-wow-delay="0.6s">
+                        <div class="contact_des">
+                            <h2>Hotel Villa Bejar</h2>
+                            <p>Ave. Domingo Diez 2350, Chamilpa, 62210 Cuernavaca, Mor.</p>
+                            <h4>Tel: 777 101 0000</h4>	
+                        </div>
+                    </div>
+
+                    <div class="wow fadeInUp col-md-5 col-sm-6" data-wow-delay="0.9s">
+                        <div class="contact_detail">
+                            <div class="section-title">
+                                <h3>Mapa</h3>
+                            </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3773.2204776421568!2d-99.2414836!3d18.9658679!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cde08678c97485%3A0xdbc9b6c2b173cffa!2sHotel+Villa+Bejar!5e0!3m2!1ses!2smx!4v1473354703775" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsors" class="parallax-section">
+            <div class="container">
+                <div class="row">
+
+                    <div class="wow bounceIn col-md-12 col-sm-12">
+                        <div class="section-title">
+                            <h2>Patrocinadores</h2>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="wow fadeInUp col-md-3 col-sm-6 col-xs-6" data-wow-delay="0.3s">
+                        <img src="images/sponsor-img1.jpg" class="img-responsive" alt="sponsors">	
+                    </div>
+
+                    <div class="wow fadeInUp col-md-3 col-sm-6 col-xs-6" data-wow-delay="0.6s">
+                        <img src="images/sponsor-img2.jpg" class="img-responsive" alt="sponsors">	
+                    </div>
+                    <div class="wow fadeInUp col-md-3 col-sm-6 col-xs-6" data-wow-delay="0.6s">
+                        <img src="images/sponsor-img3.jpg" class="img-responsive" alt="sponsors">	
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact" class="parallax-section">
+            <div class="container">
+                <div class="row">
+
+                    <div class="wow fadeInUp col-md-offset-1 col-md-5 col-sm-6" data-wow-delay="0.6s">
+                        <div class="contact_des">
+                            <h3>Secretaría de Innovación, Ciencia y Tecnología</h3>
+                            <br>
+                            <p><strong>Sahra Stephanny Bastos García</strong><br>
+                                <a href="mailto:sahra.bastos@morelos.gob.mx">sahra.bastos@morelos.gob.mx</a></p>
+                            <p>Calle la Ronda No. 13 Col. Acapantzingo <br>Cuernavaca Morelos C.P. 62440 <br> Interior del Parque San Miguel Acapantzingo</p>
+                            <p>Tel. [777] 312-4855</p>
+                          
+                        </div>
+                    </div>
+
+                    <div class="wow fadeInUp col-md-5 col-sm-6" data-wow-delay="0.9s">
+                        <div class="contact_detail">
+                            <div class="section-title">
+                                <h3>Contáctanos</h3>
+                            </div>
+                            <form action="#" method="post">
+                                <input name="name" type="text" class="form-control" id="name" placeholder="Nombre">
+                                <input name="email" type="email" class="form-control" id="email" placeholder="Correo electrónico">
+                                <textarea name="message" rows="5" class="form-control" id="message" placeholder="Mensaje"></textarea>
+                                <div class="col-md-6 col-sm-10">
+                                    <input name="submit" type="submit" class="form-control" id="submit" value="Enviar">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+-->
+
+<!-- =========================
+    FOOTER SECTION   
+============================== -->
+        <footer>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                        <p class="wow fadeInUp" data-wow-delay="0.6s">&copy; 2017 <a href="http://sicyt.morelos.gob.mx/">Secretaría de Innovación, Ciencia y Tecnología</a> </p>
+
+                        <ul class="social-icon">
+                            <li><a href="https://www.facebook.com/SICyTMorelos?fref=ts" class="fa fa-facebook wow fadeInUp" data-wow-delay="1s"></a></li>
+                            <li><a href="https://twitter.com/SICyT_Morelos" class="fa fa-twitter wow fadeInUp" data-wow-delay="1.3s"></a></li>
+                            <li><a href="https://www.youtube.com/user/SICyTMor" class="fa fa-youtube wow fadeInUp" data-wow-delay="1.6s"></a></li>
+                            <!--<li><a href="#" class="fa fa-behance wow fadeInUp" data-wow-delay="1.9s"></a></li>
+                            <li><a href="#" class="fa fa-google-plus wow fadeInUp" data-wow-delay="2s"></a></li>-->
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+<!-- Back top -->
+        <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+
+<!-- =========================
+     SCRIPTS   
+============================== -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.parallax.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/smoothscroll.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
